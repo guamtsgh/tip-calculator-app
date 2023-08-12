@@ -17,6 +17,10 @@
   justify-content: center;
 }
 
+.between {
+  justify-content: space-between;
+}
+
 .fullScreen {
   width: 100%;
   height: 100%;
@@ -30,19 +34,31 @@
   color: var(--dark);
   font-weight: 900;
 }
+
+.resultTitle {
+  font-size: 0.7rem;
+  color: white;
+}
+
+.resultText {
+  font-size: 0.6rem;
+  color: var(--inputText);
+}
+
 /* ------------------------------ */
 
 #title {
   letter-spacing: 0.5rem;
   padding-left: 0.5rem;
   margin-bottom: 3rem;
+  color: var(--text);
 }
 
 #calBox {
   background-color: var(--calBoxBg);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 1rem 1rem 1rem var(--dark);
+  box-shadow: 1rem 1rem 2rem var(--darkOpacity);
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -110,14 +126,13 @@ input::placeholder {
 }
 
 #percentGridList button:hover {
-  background-color: var(--cyanOpacity);
+  background-color: var(--cyan);
   cursor: pointer;
   color: var(--dark);
 }
 
 #percentGridList button:active {
-  outline: 0.1rem solid;
-  outline-color: var(--dark);
+  background-color: var(--cyanDesaturate);
 }
 
 /* Custom */
@@ -153,14 +168,106 @@ input::placeholder {
   text-align: end;
 }
 
+/* ------------------------------- */
+
+#resultBox {
+  background-color: var(--dark);
+  color: white;
+
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+#content {
+  gap: 1rem;
+}
+
+#tipText {
+  justify-content: center;
+}
+
+#tipAmountBox {
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+#totalText {
+  justify-content: center;
+}
+
+.num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--cyan);
+  text-align: end;
+}
+
+#resultBox button {
+  background-color: var(--cyan);
+  padding: 0.4rem;
+  color: var(--dark);
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+}
+
+#resultBox button:active {
+  background-color: var(--cyanDesaturate);
+}
+
 /* ---------------------------- */
 
-@media (width <= 375px) {
+@media (width <= 922px) {
+  #title {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
   #calBox {
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 100vw;
+    gap: 1rem;
+  }
+
+  #inputBox {
+    gap: 1rem;
+    width: 100%;
   }
 
   #percentGridList {
-    grid-template-columns: repeat(2, 5.5rem);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #tipAmountBox {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #totalBox {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #resultBox {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .num {
+    font-size: 1.7rem;
+  }
+}
+
+@media (width <= 372px) {
+  #tipAmountBox {
+    flex-direction: column;
+    gap: 0rem;
+    flex-wrap: wrap;
+  }
+
+  #totalBox {
+    flex-direction: column;
+    gap: 0rem;
+    flex-wrap: wrap;
   }
 }

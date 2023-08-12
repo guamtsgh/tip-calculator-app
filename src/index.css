@@ -11,7 +11,8 @@
   --calBoxBg: hsl(0, 0%, 100%);
   --cyan: hsl(172, 67%, 45%);
   --warn: #d98b78;
-  --cyanOpacity: hsl(172, 67%, 45%, 0.5);
+  --darkOpacity: hsla(183, 100%, 15%, 0.2);
+  --cyanDesaturate: hsl(173, 61%, 77%);
 }
 
 html {
@@ -35,4 +36,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (width <= 922px) {
+  body {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
