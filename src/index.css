@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  --dark: hsl(183, 100%, 15%);
+  --text: hsl(186, 14%, 43%);
+  --inputText: hsl(184, 14%, 56%);
+  --bg: hsl(185, 41%, 84%);
+  --inputBg: hsl(189, 41%, 97%);
+  --calBoxBg: hsl(0, 0%, 100%);
+  --cyan: hsl(172, 67%, 45%);
+  --warn: #d98b78;
+  --cyanOpacity: hsl(172, 67%, 45%, 0.5);
+}
+
+html {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+  /* background-color: var(--bg); */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
