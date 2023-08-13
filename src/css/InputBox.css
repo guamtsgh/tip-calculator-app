@@ -10,7 +10,7 @@
 
 .label {
   font-size: 0.7rem;
-  color: var(--dark);
+  color: var(--text);
 }
 
 input {
