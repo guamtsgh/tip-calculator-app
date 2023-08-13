@@ -23,7 +23,15 @@ function ResultBox({ tip, total, handleReset }) {
           </div>
         </div>
       </div>
-      <button onClick={handleReset}>RESET</button>
+      {tip === "0.00" && total === "0.00" ? (
+        <button onClick={handleReset} disabled>
+          RESET
+        </button>
+      ) : (
+        <button className="button" onClick={handleReset}>
+          RESET
+        </button>
+      )}
     </section>
   );
 }

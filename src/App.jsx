@@ -10,16 +10,6 @@ function App() {
   const [inputPercentage, setInputPercentage] = useState("");
   const [tip, setTip] = useState("0.00");
   const [total, setTotal] = useState("0.00");
-  console.log(
-    `
-    bill ${bill}
-    people ${people}
-    percentage ${percentage}
-    inputPercentage ${inputPercentage}
-    setTip ${setTip}
-    total ${setTotal}
-    `
-  );
 
   useEffect(() => {
     if (bill && people) {

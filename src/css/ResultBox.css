@@ -31,7 +31,7 @@
   text-align: end;
 }
 
-#resultBox button {
+.button {
   background-color: var(--cyan);
   padding: 0.4rem;
   color: var(--dark);
@@ -39,8 +39,16 @@
   border-radius: 0.2rem;
 }
 
-#resultBox button:active {
+.button:active {
   background-color: var(--cyanDesaturate);
+}
+
+button[disabled] {
+  background-color: var(--cyanOpacity);
+  color: var(--darkOpacity);
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
 }
 
 @media (width <= 922px) {

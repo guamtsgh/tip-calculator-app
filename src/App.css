@@ -58,7 +58,7 @@
   background-color: var(--calBoxBg);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 1rem 1rem 2rem var(--darkOpacity);
+  box-shadow: 1rem 1rem 2rem var(--shadowed);
   flex-wrap: wrap;
   gap: 2rem;
 }
