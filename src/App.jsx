@@ -5,7 +5,7 @@ import InputBox from "./components/InputBox";
 
 function App() {
   const [bill, setBill] = useState("");
-  const [people, setPeople] = useState(null);
+  const [people, setPeople] = useState("");
   const [percentage, setPercentage] = useState(null);
   const [inputPercentage, setInputPercentage] = useState("");
   const [tip, setTip] = useState("0.00");
