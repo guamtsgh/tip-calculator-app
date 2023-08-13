@@ -4,13 +4,12 @@ import "../css/People-sub.css";
 
 function People({ people, setPeople }) {
   const [errorMessage, setErrorMessage] = useState("");
-  console.log(errorMessage);
 
   function handleInputChange(event) {
     const value = event.target.value;
     setPeople(value);
 
-    if (value === "0") {
+    if (value == 0 && value !== "") {
       setErrorMessage("Can't be zero");
     } else {
       setErrorMessage("");
@@ -28,13 +27,6 @@ function People({ people, setPeople }) {
             {errorMessage}
           </label>
         )}
-        {/* <label
-          id="zeroWarning"
-          htmlFor="people"
-          className={people === "0" ? "zero" : ""}
-        >
-          Can't be zero
-        </label> */}
       </div>
       <input
         id="peopleInput"
@@ -45,7 +37,7 @@ function People({ people, setPeople }) {
         value={people}
         className={
           errorMessage
-            ? "error  inputPadding inputText"
+            ? "error inputPadding inputText"
             : "inputPadding inputText focus"
         }
       />

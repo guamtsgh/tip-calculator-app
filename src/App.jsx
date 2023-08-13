@@ -5,34 +5,49 @@ import InputBox from "./components/InputBox";
 
 function App() {
   const [bill, setBill] = useState("");
-  const [people, setPeople] = useState("");
+  const [people, setPeople] = useState(null);
   const [percentage, setPercentage] = useState(null);
   const [inputPercentage, setInputPercentage] = useState("");
   const [tip, setTip] = useState("0.00");
   const [total, setTotal] = useState("0.00");
+  console.log(
+    `
+    bill ${bill}
+    people ${people}
+    percentage ${percentage}
+    inputPercentage ${inputPercentage}
+    tip ${tip}
+    total ${total}
+    `
+  );
 
   useEffect(() => {
     if (bill && people) {
       const billAmount = Number(bill);
-      const peopleCount = Number(people);
+      const peopleCount = parseInt(people);
 
-      if (percentage !== null) {
-        const calPercentage = Number(percentage);
-        const totalPerPerson =
-          (billAmount + billAmount * (calPercentage / 100)) / peopleCount;
-        const tipAmountPerPerson =
-          (billAmount * (calPercentage / 100)) / peopleCount;
-        setTip(tipAmountPerPerson.toFixed(2));
-        setTotal(totalPerPerson.toFixed(2));
-      }
+      let calPercentage = percentage !== null ? Number(percentage) : null;
+
       if (inputPercentage !== null && inputPercentage !== "") {
-        const calPercentage = Number(inputPercentage);
+        calPercentage = Number(inputPercentage);
+      }
+
+      if (calPercentage !== null) {
         const totalPerPerson =
           (billAmount + billAmount * (calPercentage / 100)) / peopleCount;
         const tipAmountPerPerson =
           (billAmount * (calPercentage / 100)) / peopleCount;
-        setTip(tipAmountPerPerson.toFixed(2));
-        setTotal(totalPerPerson.toFixed(2));
+
+        if (
+          !Number.isFinite(totalPerPerson) ||
+          !Number.isFinite(tipAmountPerPerson)
+        ) {
+          setTip("0.00");
+          setTotal("0.00");
+        } else {
+          setTip(tipAmountPerPerson.toFixed(2));
+          setTotal(totalPerPerson.toFixed(2));
+        }
       }
     }
   }, [bill, people, percentage, inputPercentage]);
