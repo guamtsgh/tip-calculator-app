@@ -1,0 +1,46 @@
+#resultBox {
+  background-color: var(--dark);
+  color: white;
+
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+#content {
+  gap: 1rem;
+}
+
+#tipText {
+  justify-content: center;
+}
+
+#tipAmountBox {
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+#totalText {
+  justify-content: center;
+}
+
+.num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--cyan);
+  text-align: end;
+}
+
+#resultBox button {
+  background-color: var(--cyan);
+  padding: 0.4rem;
+  color: var(--dark);
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+}
+
+#resultBox button:active {
+  background-color: var(--cyanDesaturate);
+}
+
+/* --------------------------------------- */

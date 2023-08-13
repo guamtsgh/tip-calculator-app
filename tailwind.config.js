@@ -13,6 +13,7 @@ export default {
       "grayish-cyan": "hsl(184, 14%, 56%)",
       "light-grayish-cyan": "hsl(185, 41%, 84%)",
       "very-light-grayish-cyan": "hsl(189, 41%, 97%)",
+      warn: "#d98b78",
     },
     extend: {},
   },

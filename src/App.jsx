@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import iconPerson from "../images/icon-person.svg";
-import iconDollar from "../images/icon-dollar.svg";
-import PercentageButtons from "./components/percentageButton";
+import ResultBox from "./components/ResultBox";
+import InputBox from "./components/InputBox";
 
 function App() {
   const [bill, setBill] = useState("");
@@ -65,68 +64,16 @@ function App() {
         TTER
       </p>
       <section id="calBox" className="flexRow">
-        <section id="inputBox" className="flexColumn">
-          <div id="bill">
-            <label htmlFor="bill">Bill</label>
-            <input
-              type="text"
-              name="bill"
-              placeholder="0"
-              className="inputPadding inputText inputFocus"
-              onChange={(event) => setBill(event.target.value)}
-              value={bill}
-            />
-            <img src={iconDollar} alt="Dollar Icon" />
-          </div>
-          <div id="tip">
-            <label htmlFor="tipList">Select Tip %</label>
-            <PercentageButtons
-              setPercentage={setPercentage}
-              setInputPercentage={setInputPercentage}
-              inputPercentage={inputPercentage}
-            />
-          </div>
-          <div id="people">
-            <div id="labelBox" className="flexRow">
-              <label htmlFor="people">Number of People</label>
-              <label id="labelFocus" htmlFor="people">
-                Can't be zero
-              </label>
-            </div>
-            <input
-              type="text"
-              name="people"
-              placeholder="0"
-              className="inputPadding inputText"
-              onChange={(event) => setPeople(event.target.value)}
-              value={people}
-            />
-            <img src={iconPerson} alt="Person Icon" />
-          </div>
-        </section>
-        <section id="resultBox" className="flexColumn">
-          <div id="content" className="flexColumn">
-            <div id="tipAmountBox" className="flexRow">
-              <div id="tipText" className="flexColumn">
-                <p className="resultTitle">Tip Amount</p>
-                <p className="resultText">/ person</p>
-              </div>
-              <div id="tipNum" className="num">
-                ${tip}
-              </div>
-            </div>
-            <div id="totalBox" className="flexRow between">
-              <div id="totalText" className="flexColumn">
-                <p className="resultTitle">Total</p>
-                <p className="resultText">/ person</p>
-              </div>
-              <div id="totalNum" className="num">
-                ${total}
-              </div>
-            </div>
-          </div>
-          <button onClick={handleReset}>RESET</button>
-        </section>
+        <InputBox
+          bill={bill}
+          setBill={setBill}
+          setPercentage={setPercentage}
+          setInputPercentage={setInputPercentage}
+          inputPercentage={inputPercentage}
+          people={people}
+          setPeople={setPeople}
+        />
+        <ResultBox tip={tip} total={total} handleReset={handleReset} />
       </section>
     </div>
   );

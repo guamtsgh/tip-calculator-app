@@ -1,5 +1,3 @@
-import React from "react";
-
 const percentageData = [
   { text: "5%", value: 5 },
   { text: "10%", value: 10 },

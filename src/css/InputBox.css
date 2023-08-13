@@ -1,0 +1,76 @@
+#inputBox {
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+#inputBox div {
+  width: 100%;
+}
+
+#inputBox label {
+  font-size: 0.7rem;
+  color: var(--dark);
+}
+
+input {
+  display: flex;
+  width: 100%;
+  text-align: end;
+  background-color: var(--inputBg);
+  border-radius: 0.2rem;
+}
+
+input:focus {
+  outline: 0.1rem solid;
+  outline-color: var(--cyan);
+}
+
+input::placeholder {
+  color: var(--inputText);
+}
+
+/* -----------Bill---------- */
+
+#bill {
+  position: relative;
+}
+
+#bill img {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0.5rem;
+}
+
+/* -----------Tip------------ */
+
+#percentGridList {
+  display: grid;
+  grid-template-columns: repeat(3, 5rem);
+  grid-gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+#percentGridList button {
+  background-color: var(--dark);
+  color: white;
+  border-radius: 0.2rem;
+  height: 2rem;
+}
+
+#percentGridList button:hover {
+  background-color: var(--cyan);
+  cursor: pointer;
+  color: var(--dark);
+}
+
+#percentGridList button:active {
+  background-color: var(--cyanDesaturate);
+}
+
+/* Custom */
+#percentGridList input::placeholder {
+  color: var(--text);
+  text-align: center;
+  padding: 0;
+}

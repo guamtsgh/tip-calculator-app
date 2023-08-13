@@ -1,0 +1,38 @@
+#people {
+  position: relative;
+}
+
+#people img {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 0.5rem;
+}
+
+/* #people input:focus {
+  outline: 0.1rem solid;
+  outline-color: var(--warn);
+} */
+
+#labelBox {
+  justify-content: space-between;
+}
+
+/* #labelBox #zeroWarning {
+  display: none;
+  color: var(--warn);
+  text-align: end;
+} */
+
+/* #labelBox #zeroWarning.zero {
+  display: flex;
+} */
+
+/* .error {
+  outline: 0.1rem solid;
+  outline-color: var(--warn);
+} */
+
+.warning {
+  color: var(--warn);
+  text-align: end;
+}
