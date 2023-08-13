@@ -1,0 +1,36 @@
+#percentGridList {
+  display: grid;
+  grid-template-columns: repeat(3, 5rem);
+  grid-gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+#percentGridList button {
+  background-color: var(--dark);
+  color: white;
+  border-radius: 0.2rem;
+  height: 2rem;
+}
+
+#percentGridList button:hover {
+  background-color: var(--cyan);
+  cursor: pointer;
+  color: var(--dark);
+}
+
+#percentGridList button:active {
+  background-color: var(--cyanDesaturate);
+}
+
+/* Custom */
+#percentGridList input::placeholder {
+  color: var(--text);
+  text-align: center;
+  padding: 0;
+}
+
+@media (width <= 922px) {
+  #percentGridList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

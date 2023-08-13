@@ -20,9 +20,11 @@ function People({ people, setPeople }) {
   return (
     <div id="people">
       <div id="labelBox" className="flexRow">
-        <label htmlFor="people">Number of People</label>
+        <label htmlFor="people" className="label">
+          Number of People
+        </label>
         {errorMessage && (
-          <label htmlFor="people" className="text-warn text-end">
+          <label htmlFor="people" className="labelWarning">
             {errorMessage}
           </label>
         )}
@@ -44,7 +46,7 @@ function People({ people, setPeople }) {
         className={
           errorMessage
             ? "error  inputPadding inputText"
-            : "inputPadding inputText"
+            : "inputPadding inputText focus"
         }
       />
       <img src={iconPerson} alt="Person Icon" />

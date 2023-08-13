@@ -76,46 +76,4 @@
     width: 100vw;
     gap: 1rem;
   }
-
-  #inputBox {
-    gap: 1rem;
-    width: 100%;
-  }
-
-  #percentGridList {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #tipAmountBox {
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  #totalBox {
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  #resultBox {
-    width: 100%;
-    gap: 2rem;
-  }
-
-  .num {
-    font-size: 1.7rem;
-  }
-}
-
-@media (width <= 372px) {
-  #tipAmountBox {
-    flex-direction: column;
-    gap: 0rem;
-    flex-wrap: wrap;
-  }
-
-  #totalBox {
-    flex-direction: column;
-    gap: 0rem;
-    flex-wrap: wrap;
-  }
 }

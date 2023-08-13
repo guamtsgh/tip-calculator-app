@@ -30,7 +30,7 @@ function PercentageButtons({
       <input
         type="text"
         placeholder="Custom"
-        className="inputPadding inputText"
+        className="inputPadding inputText focus"
         onChange={(event) => setInputPercentage(event.target.value)}
         value={inputPercentage}
       />

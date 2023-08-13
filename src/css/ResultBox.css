@@ -43,4 +43,37 @@
   background-color: var(--cyanDesaturate);
 }
 
-/* --------------------------------------- */
+@media (width <= 922px) {
+  #tipAmountBox {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #totalBox {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #resultBox {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .num {
+    font-size: 1.7rem;
+  }
+}
+
+@media (width <= 372px) {
+  #tipAmountBox {
+    flex-direction: column;
+    gap: 0rem;
+    flex-wrap: wrap;
+  }
+
+  #totalBox {
+    flex-direction: column;
+    gap: 0rem;
+    flex-wrap: wrap;
+  }
+}
