@@ -22,7 +22,6 @@ html {
   font-weight: 700;
   font-family: "Space Mono", monospace;
   background-color: hsl(185, 41%, 84%);
-  /* background-color: var(--bg); */
 }
 
 * {
